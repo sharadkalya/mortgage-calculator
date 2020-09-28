@@ -1,38 +1,87 @@
 .App {
-  text-align: center;
+  padding: 20px;
+  color: darkslategray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mortgage-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-container {
+  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.slider-container {
+  min-width: 420px;
+}
+
+.circle-one,
+.circle-two,
+.circle-three,
+.mortgage-value {
+  position: absolute;
+}
+
+.mortgage-value {
+  top: 100px;
+  left: 90px;
+}
+
+.circle-one {
+  top: 0;
+  left: 0;
+}
+
+.circle-two {
+  top: 25px;
+  left: 25px;
+}
+
+.circle-three {
+  top: 50px;
+  left: 50px;
+}
+
+.circle-one .MuiCircularProgress-colorPrimary {
+  color: #7170ac;
+}
+
+.circle-two svg {
+  color: #161d76;
+}
+
+.circle-three svg {
+  color: #cfcfe3;
+}
+
+.common-charges,
+.mortgage-charges,
+.tax-charges {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.common-charges::before,
+.mortgage-charges::before,
+.tax-charges::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.common-charges::before {
+  background-color: #161d76;
+}
+
+.mortgage-charges::before {
+  background-color: #7170ac;
+}
+
+.tax-charges::before {
+  background-color: #cfcfe3;
 }
